@@ -2,12 +2,16 @@
   <div id="app">
     <header>
       <nav>
-        <ul>
-          <li>
-            <a href="#"></a>
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link nav--atras" href="#">
+              <img class="img-fluid" src="../static/img/common/atras.svg" alt="Volver atrás">
+            </a>
           </li>
-          <li>
-            <a href="/"></a>
+          <li class="nav-item">
+            <a class="nav-link nav--logo" href="/">
+              <img class="img-fluid" src="../static/img/common/logo.svg" alt="Volver atrás">
+            </a>
           </li>
           <li></li>
         </ul>
