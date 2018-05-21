@@ -8451,10 +8451,15 @@ a.text-dark:hover, a.text-dark:focus {
 body {
   font-family: 'roboto';
   background-color: #cf1143;
+  padding-top: 4rem;
 }
 
 .nav {
-  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   background-color: #fff;
 }
 
@@ -8475,6 +8480,145 @@ body {
   width: 50%;
 }
 
+.page--trayectos section.trayectos--formulario {
+  height: calc((100vh / 3) - (4rem / 3));
+  padding: 2rem 1rem .5rem;
+}
+
+.page--trayectos section.trayectos--formulario .formulario--contenedor {
+  display: flex;
+  align-items: center;
+}
+
+.page--trayectos section.trayectos--formulario .formulario--contenedor .contenedor--icono-trayecto, .page--trayectos section.trayectos--formulario .formulario--contenedor .contenedor--icono-flechas {
+  width: 10%;
+}
+
+.page--trayectos section.trayectos--formulario .formulario--contenedor .contenedor--form {
+  width: 80%;
+}
+
+.page--trayectos section.trayectos--formulario .formulario--contenedor .contenedor--form input {
+  background-color: initial;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 0;
+}
+
+.page--trayectos section.trayectos--formulario .formulario--contenedor .contenedor--form input::placeholder {
+  color: #fff;
+}
+
+.page--trayectos section.trayectos--formulario .formulario--contenedor .contenedor--form input:first-child {
+  margin-bottom: 1rem;
+}
+
+.page--trayectos section.trayectos--formulario .formulario--contenedor .contenedor--form input:focus {
+  box-shadow: initial;
+}
+
+.page--trayectos section.trayectos--formulario .formulario--contenedor .contenedor--icono-trayecto img {
+  width: 1.3rem;
+}
+
+.page--trayectos section.trayectos--formulario .formulario--contenedor .contenedor--icono-flechas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page--trayectos section.trayectos--formulario .formulario--contenedor .contenedor--icono-flechas button {
+  background: initial;
+  margin-left: .5rem;
+  border: 0;
+  padding: 0;
+}
+
+.page--trayectos section.trayectos--formulario .formulario--contenedor .contenedor--icono-flechas button img {
+  width: 1.3rem;
+}
+
+.page--trayectos section.trayectos--formulario .btn__horario {
+  display: block;
+  background-color: #fff;
+  border: 0;
+  border-radius: 0;
+  color: #cf1143;
+  font-weight: 500;
+  margin: 1rem auto;
+  padding: .5rem 1rem;
+}
+
+.page--trayectos section.trayectos--formulario .btn__horario i {
+  margin-left: 1rem;
+}
+
+.page--trayectos section.trayectos--favoritos, .page--trayectos section.trayectos--historial {
+  height: calc((100vh / 3) - (4rem / 3));
+  overflow: auto;
+  padding: 1rem;
+}
+
+.page--trayectos section.trayectos--favoritos h1, .page--trayectos section.trayectos--historial h1 {
+  font-size: 1.3rem;
+  text-align: center;
+  color: #cf1143;
+}
+
+.page--trayectos section.trayectos--favoritos hr, .page--trayectos section.trayectos--historial hr {
+  width: 10rem;
+  border: 1.3px solid #cf1143;
+  background-color: #cf1143;
+  margin: 0 auto;
+}
+
+.page--trayectos section.trayectos--favoritos .table td, .page--trayectos section.trayectos--historial .table td {
+  padding-top: 1rem;
+  border: 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+.page--trayectos section.trayectos--favoritos .table td.text, .page--trayectos section.trayectos--historial .table td.text {
+  font-size: 1rem;
+}
+
+.page--trayectos section.trayectos--favoritos .table td button, .page--trayectos section.trayectos--historial .table td button {
+  background-color: initial;
+  border: 0;
+  display: block;
+  width: 100%;
+}
+
+.page--trayectos section.trayectos--favoritos {
+  background-color: #fff;
+}
+
+.page--trayectos section.trayectos--historial {
+  background-color: #cf1143;
+  color: #fff;
+}
+
+.page--trayectos section.trayectos--historial h1 {
+  color: #fff;
+}
+
+.page--trayectos section.trayectos--historial hr {
+  border-color: #fff;
+  background-color: #fff;
+}
+
+.page--trayectos section.trayectos--historial svg {
+  stroke: #fff;
+  fill: #cf1143;
+  width: 1rem;
+  stroke-width: 2px;
+}
+
+.page--mostrar-horarios {
+  height: 100vh;
+}
+
 .page--mostrar-horarios .horarios--texto {
   text-align: center;
   padding: 1rem 0;
@@ -8491,5 +8635,65 @@ body {
   height: 520px;
   margin: 0 1rem;
   background-color: #fff;
+}
+
+.page--mostrar-horarios .horarios--cuadro .cuadro--favoritos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 17%;
+}
+
+.page--mostrar-horarios .horarios--cuadro .cuadro--favoritos .ruta {
+  width: 80%;
+}
+
+.page--mostrar-horarios .horarios--cuadro .cuadro--favoritos .ruta .ruta-inicio {
+  border-bottom: 0.1rem solid #cf1143;
+}
+
+.page--mostrar-horarios .horarios--cuadro .cuadro--favoritos .ruta .ruta-inicio p {
+  margin: .5rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.page--mostrar-horarios .horarios--cuadro .cuadro--favoritos .ruta .ruta-fin {
+  border-top: 0.1rem solid #cf1143;
+}
+
+.page--mostrar-horarios .horarios--cuadro .cuadro--favoritos .ruta .ruta-fin p {
+  margin: .5rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.page--mostrar-horarios .horarios--cuadro .cuadro--favoritos .favorito {
+  width: 4.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page--mostrar-horarios .horarios--cuadro .cuadro--favoritos .favorito .btn {
+  border: none;
+  background-color: initial;
+  height: 100%;
+}
+
+.page--mostrar-horarios .horarios--cuadro .cuadro--favoritos .favorito .btn:focus {
+  box-shadow: initial;
+}
+
+.page--mostrar-horarios .horarios--cuadro .cuadro--favoritos .favorito .btn svg {
+  width: 65%;
+  fill: none;
+  stroke: #cf1143;
+  stroke-width: 2px;
+}
+
+.page--mostrar-horarios .horarios--cuadro .cuadro--tabla {
+  height: 83%;
+  background-color: #e3e3e3;
 }
 /*# sourceMappingURL=main.css.map */

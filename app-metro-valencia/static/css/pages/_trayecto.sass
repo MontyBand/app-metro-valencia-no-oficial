@@ -1,0 +1,88 @@
+.page--trayectos
+    section.trayectos--formulario
+        height: calc((100vh / 3) - (4rem / 3))
+        padding: 2rem 1rem .5rem
+        .formulario--contenedor
+            display: flex
+            align-items: center
+            .contenedor--icono-trayecto, .contenedor--icono-flechas
+                width: 10%
+            .contenedor--form
+                width: 80%
+                input
+                    background-color: initial
+                    color: $color-blanco
+                    border: 2px solid $color-blanco
+                    border-radius: 0
+                    &::placeholder
+                        color: $color-blanco
+                    &:first-child
+                        margin-bottom: 1rem
+                    &:focus
+                        box-shadow: initial
+            .contenedor--icono-trayecto
+                img
+                    width: 1.3rem
+            .contenedor--icono-flechas
+                display: flex
+                justify-content: center
+                align-items: center
+                button
+                    background: initial
+                    margin-left: .5rem
+                    border: 0
+                    padding: 0
+                    img
+                        width: 1.3rem
+        .btn__horario
+            display: block
+            background-color: $color-blanco
+            border: 0
+            border-radius: 0
+            color: $color-rojo
+            font-weight: 500
+            margin: 1rem auto
+            padding: .5rem 1rem
+            i
+                margin-left: 1rem
+    section.trayectos--favoritos, section.trayectos--historial
+        height: calc((100vh / 3) - (4rem / 3))
+        overflow: auto
+        padding: 1rem
+        h1
+            font-size: 1.3rem
+            text-align: center
+            color: $color-rojo
+        hr
+            width: 10rem
+            border: 1.3px solid $color-rojo
+            background-color: $color-rojo
+            margin: 0 auto
+        .table
+            td
+                padding-top: 1rem
+                border: 0
+                text-align: center
+                font-weight: 500
+                &.text
+                    font-size: 1rem 
+                button
+                    background-color: initial
+                    border: 0
+                    display: block
+                    width: 100%
+    section.trayectos--favoritos
+        background-color: $color-blanco
+    section.trayectos--historial
+        background-color: $color-rojo
+        color: $color-blanco
+        h1 
+            color: $color-blanco
+        hr
+            border-color: $color-blanco
+            background-color: $color-blanco
+        svg
+            stroke: $color-blanco
+            fill: $color-rojo
+            width: 1rem
+            stroke-width: 2px

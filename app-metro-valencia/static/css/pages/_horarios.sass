@@ -1,4 +1,5 @@
 .page--mostrar-horarios
+    height: 100vh
     .horarios--texto
         text-align: center
         padding: 1rem 0
@@ -11,3 +12,41 @@
         height: 520px
         margin: 0 1rem
         background-color: $color-blanco
+        .cuadro--favoritos
+            display: flex
+            justify-content: center
+            align-items: center
+            height: 17%
+            .ruta
+                width: 80%
+                .ruta-inicio
+                    border-bottom: .1rem solid $color-rojo
+                    p
+                        margin: .5rem
+                        font-size: 1rem
+                        font-weight: 500
+                .ruta-fin
+                    border-top: .1rem solid $color-rojo
+                    p
+                        margin: .5rem
+                        font-size: 1rem
+                        font-weight: 500
+            .favorito
+                width: 4.5rem
+                display: flex
+                justify-content: center
+                align-items: center
+                .btn
+                    border: none
+                    background-color: initial
+                    height: 100%
+                    &:focus
+                        box-shadow: initial
+                    svg
+                        width: 65%
+                        fill: none
+                        stroke: $color-rojo
+                        stroke-width: 2px
+        .cuadro--tabla
+            height: 83%
+            background-color: $color-gris-claro
