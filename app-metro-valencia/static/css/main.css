@@ -8439,7 +8439,7 @@ a.text-dark:hover, a.text-dark:focus {
 @font-face {
   font-family: 'roboto';
   src: url(../fonts/roboto/Roboto-Thin.woff2);
-  font-weight: thin;
+  font-weight: 100;
 }
 
 @font-face {
@@ -8478,6 +8478,11 @@ body {
 
 .nav li:nth-child(2) {
   width: 50%;
+}
+
+p {
+  margin: 0;
+  padding: 0;
 }
 
 .page--trayectos section.trayectos--formulario {
@@ -8616,84 +8621,188 @@ body {
 }
 
 .page--mostrar-horarios {
-  height: 100vh;
+  height: calc(100vh - 4rem);
 }
 
-.page--mostrar-horarios .horarios--texto {
+.page--mostrar-horarios section.horarios--texto {
   text-align: center;
   padding: 1rem 0;
 }
 
-.page--mostrar-horarios .horarios--texto h1 {
+.page--mostrar-horarios section.horarios--texto h1 {
   font-size: 1.35rem;
   color: #fff;
   font-weight: 500;
   margin: 0;
 }
 
-.page--mostrar-horarios .horarios--cuadro {
-  height: 520px;
+.page--mostrar-horarios section.horarios--cuadro {
+  height: 87%;
   margin: 0 1rem;
   background-color: #fff;
 }
 
-.page--mostrar-horarios .horarios--cuadro .cuadro--favoritos {
+.page--mostrar-horarios section.horarios--cuadro .cuadro--favoritos {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 17%;
 }
 
-.page--mostrar-horarios .horarios--cuadro .cuadro--favoritos .ruta {
+.page--mostrar-horarios section.horarios--cuadro .cuadro--favoritos .ruta {
   width: 80%;
 }
 
-.page--mostrar-horarios .horarios--cuadro .cuadro--favoritos .ruta .ruta-inicio {
+.page--mostrar-horarios section.horarios--cuadro .cuadro--favoritos .ruta .ruta-inicio {
   border-bottom: 0.1rem solid #cf1143;
+  display: flex;
+  justify-content: space-between;
 }
 
-.page--mostrar-horarios .horarios--cuadro .cuadro--favoritos .ruta .ruta-inicio p {
+.page--mostrar-horarios section.horarios--cuadro .cuadro--favoritos .ruta .ruta-inicio .zona {
+  margin-top: 0;
+  font-size: .8rem;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+
+.page--mostrar-horarios section.horarios--cuadro .cuadro--favoritos .ruta .ruta-inicio p {
   margin: .5rem;
   font-size: 1rem;
   font-weight: 500;
 }
 
-.page--mostrar-horarios .horarios--cuadro .cuadro--favoritos .ruta .ruta-fin {
+.page--mostrar-horarios section.horarios--cuadro .cuadro--favoritos .ruta .ruta-fin {
   border-top: 0.1rem solid #cf1143;
+  display: flex;
+  justify-content: space-between;
 }
 
-.page--mostrar-horarios .horarios--cuadro .cuadro--favoritos .ruta .ruta-fin p {
+.page--mostrar-horarios section.horarios--cuadro .cuadro--favoritos .ruta .ruta-fin .zona {
+  margin-top: 0;
+  font-size: .8rem;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+
+.page--mostrar-horarios section.horarios--cuadro .cuadro--favoritos .ruta .ruta-fin p {
   margin: .5rem;
   font-size: 1rem;
   font-weight: 500;
 }
 
-.page--mostrar-horarios .horarios--cuadro .cuadro--favoritos .favorito {
+.page--mostrar-horarios section.horarios--cuadro .cuadro--favoritos .favorito {
   width: 4.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.page--mostrar-horarios .horarios--cuadro .cuadro--favoritos .favorito .btn {
+.page--mostrar-horarios section.horarios--cuadro .cuadro--favoritos .favorito .btn {
   border: none;
   background-color: initial;
   height: 100%;
 }
 
-.page--mostrar-horarios .horarios--cuadro .cuadro--favoritos .favorito .btn:focus {
+.page--mostrar-horarios section.horarios--cuadro .cuadro--favoritos .favorito .btn:focus {
   box-shadow: initial;
 }
 
-.page--mostrar-horarios .horarios--cuadro .cuadro--favoritos .favorito .btn svg {
+.page--mostrar-horarios section.horarios--cuadro .cuadro--favoritos .favorito .btn svg {
   width: 65%;
   fill: none;
   stroke: #cf1143;
   stroke-width: 2px;
 }
 
-.page--mostrar-horarios .horarios--cuadro .cuadro--tabla {
-  height: 83%;
-  background-color: #e3e3e3;
+.page--mostrar-horarios section.horarios--cuadro .cuadro--rutas {
+  background-color: #cf1143;
+  margin: .5rem 0;
+  height: 9%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page--mostrar-horarios section.horarios--cuadro .cuadro--rutas button {
+  background-color: #fff;
+  color: #cf1143;
+  border: 0;
+  margin: .5rem;
+  padding: .2rem 1.5rem;
+}
+
+.page--mostrar-horarios section.horarios--cuadro .cuadro--rutas button:focus {
+  box-shadow: initial;
+  outline: 0;
+}
+
+.page--mostrar-horarios section.horarios--cuadro .cuadro--rutas .inactivo {
+  background-color: initial;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.page--mostrar-horarios section.horarios--cuadro .cuadro--direccion-linea {
+  display: flex;
+  height: 6%;
+  background-color: #fff;
+}
+
+.page--mostrar-horarios section.horarios--cuadro .cuadro--direccion-linea .cuadro--direccion {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+  width: 80%;
+}
+
+.page--mostrar-horarios section.horarios--cuadro .cuadro--direccion-linea .cuadro--direccion p {
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.page--mostrar-horarios section.horarios--cuadro .cuadro--direccion-linea .cuadro--linea {
+  width: 20%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page--mostrar-horarios section.horarios--cuadro .cuadro--direccion-linea .cuadro--linea p {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.page--mostrar-horarios section.horarios--cuadro .cuadro--direccion-linea .cuadro--linea .linea {
+  margin-left: .5rem;
+  padding: .2rem 1rem;
+  color: #fff;
+  background-color: #EFC42B;
+}
+
+.page--mostrar-horarios section.horarios--cuadro .cuadro--horarios {
+  background-color: #cf1143;
+  margin: .5rem 0;
+  height: 9%;
+  color: #fff;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page--mostrar-horarios section.horarios--cuadro .cuadro--tabla {
+  height: 50%;
+  overflow: auto;
+  background-color: #fff;
+}
+
+.page--mostrar-horarios section.horarios--cuadro .cuadro--tabla table.table {
+  text-align: center;
+}
+
+.page--mostrar-horarios section.horarios--cuadro .cuadro--tabla table.table th, .page--mostrar-horarios section.horarios--cuadro .cuadro--tabla table.table td {
+  border: 0;
 }
 /*# sourceMappingURL=main.css.map */

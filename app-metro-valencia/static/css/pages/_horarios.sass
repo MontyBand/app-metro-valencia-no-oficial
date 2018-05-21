@@ -1,6 +1,6 @@
 .page--mostrar-horarios
-    height: 100vh
-    .horarios--texto
+    height: calc(100vh - 4rem)
+    section.horarios--texto
         text-align: center
         padding: 1rem 0
         h1
@@ -8,8 +8,8 @@
             color: $color-blanco
             font-weight: 500
             margin: 0
-    .horarios--cuadro
-        height: 520px
+    section.horarios--cuadro
+        height: 87%
         margin: 0 1rem
         background-color: $color-blanco
         .cuadro--favoritos
@@ -21,12 +21,26 @@
                 width: 80%
                 .ruta-inicio
                     border-bottom: .1rem solid $color-rojo
+                    display: flex
+                    justify-content: space-between
+                    .zona
+                        margin-top: 0
+                        font-size: .8rem
+                        text-transform: uppercase
+                        font-weight: 100
                     p
                         margin: .5rem
                         font-size: 1rem
                         font-weight: 500
                 .ruta-fin
                     border-top: .1rem solid $color-rojo
+                    display: flex
+                    justify-content: space-between
+                    .zona
+                        margin-top: 0
+                        font-size: .8rem
+                        text-transform: uppercase
+                        font-weight: 100
                     p
                         margin: .5rem
                         font-size: 1rem
@@ -47,6 +61,66 @@
                         fill: none
                         stroke: $color-rojo
                         stroke-width: 2px
+        .cuadro--rutas
+            background-color: $color-rojo
+            margin: .5rem 0
+            height: 9%
+            display: flex
+            align-items: center
+            justify-content: center
+            button
+                background-color: $color-blanco
+                color: $color-rojo
+                border: 0
+                margin: .5rem
+                padding: .2rem 1.5rem
+                &:focus
+                    box-shadow: initial
+                    outline: 0
+            .inactivo
+                background-color: initial
+                color: $color-blanco
+                border: 2px solid $color-blanco
+        .cuadro--direccion-linea
+            display: flex
+            height: 6%
+            background-color: $color-blanco
+            .cuadro--direccion
+                display: flex
+                align-items: center
+                margin-left: 1rem
+                width: 80%
+                p
+                    font-weight: 500
+                    font-size: 1.3rem
+            .cuadro--linea
+                width: 20%
+                color: $color-blanco
+                display: flex
+                justify-content: center
+                align-items: center
+                p
+                    font-size: 1.3rem
+                    font-weight: 500
+                .linea
+                    margin-left: .5rem
+                    padding: .2rem 1rem
+                    color: $color-blanco
+                    background-color: $color-linea-1
+        .cuadro--horarios
+            background-color: $color-rojo
+            margin: .5rem 0
+            height: 9%
+            color: $color-blanco
+            font-size: 1.3rem
+            display: flex
+            align-items: center
+            justify-content: center
         .cuadro--tabla
-            height: 83%
-            background-color: $color-gris-claro
+            height: 50%
+            overflow: auto
+            background-color: $color-blanco
+            table.table
+                text-align: center
+                th, td
+                    border: 0

@@ -1,16 +1,18 @@
 <template>
   <div class="page--mostrar-horarios">
     <section class="horarios--texto">
-      <h1>Mostrar horarios</h1>
+      <h1>Mostrar rutas</h1>
     </section>
     <section class="horarios--cuadro">
       <div class="cuadro--favoritos">
         <div class="ruta">
           <div class="ruta-inicio">
             <p>Ruta de inicio</p>
+            <p class="zona">Zona A</p>
           </div>
           <div class="ruta-fin">
             <p>Ruta de fin</p>
+            <p class="zona">Zona B</p>
           </div>
         </div>
         <div class="favorito">
@@ -19,7 +21,77 @@
           </button>
         </div>
       </div>
-      <div class="cuadro--tabla"></div>
+      <div class="cuadro--rutas">
+        <button>RUTA 1</button>
+        <button class="inactivo">RUTA 2</button>
+      </div>
+      <div class="cuadro--direccion-linea">
+        <div class="cuadro--direccion">
+          <p>Dirección: Rafenbunyol</p>
+        </div>
+        <div class="cuadro--linea">
+          <div class="linea">1</div>
+        </div>
+      </div>
+      <div class="cuadro--horarios">Horarios</div>
+      <div class="cuadro--tabla">
+        <table class="table">
+          <tr>
+            <th>Salida</th>
+            <th>Llegada</th>
+            <th>Salida</th>
+            <th>Llegada</th>
+          </tr>
+          <tr>
+            <td>8.15</td>
+            <td>8.25</td>
+            <td>8.15</td>
+            <td>8.25</td>
+          </tr>
+          <tr>
+            <td>8.15</td>
+            <td>8.25</td>
+            <td>8.15</td>
+            <td>8.25</td>
+          </tr>
+          <tr>
+            <td>8.15</td>
+            <td>8.25</td>
+            <td>8.15</td>
+            <td>8.25</td>
+          </tr>
+          <tr>
+            <td>8.15</td>
+            <td>8.25</td>
+            <td>8.15</td>
+            <td>8.25</td>
+          </tr>
+          <tr>
+            <td>8.15</td>
+            <td>8.25</td>
+            <td>8.15</td>
+            <td>8.25</td>
+          </tr>
+          <tr>
+            <td>8.15</td>
+            <td>8.25</td>
+            <td>8.15</td>
+            <td>8.25</td>
+          </tr>
+          <tr>
+            <td>8.15</td>
+            <td>8.25</td>
+            <td>8.15</td>
+            <td>8.25</td>
+          </tr>
+          <tr>
+            <td>8.15</td>
+            <td>8.25</td>
+            <td>8.15</td>
+            <td>8.25</td>
+          </tr>
+        </table>
+      </div>
     </section>
   </div>
 </template>
