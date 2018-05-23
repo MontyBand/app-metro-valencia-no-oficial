@@ -7,17 +7,19 @@
         </div>
         <div class="contenedor--form">
           <form>
-            <input class="form-control" type="text" placeholder="Origen...">
-            <input class="form-control" type="text" placeholder="Destino...">
+            <v-select style="height: 2.6rem" v-model="origen" :options="estaciones"></v-select>
+            <v-select style="height: 2.6rem" v-model="destino" :options="estaciones"></v-select>
           </form>
         </div>
         <div class="contenedor--icono-flechas">
-          <button class="btn__horario">
+          <button v-if="origen != 'Origen' && destino!= 'Destino' && origen && destino" @click="invertirDestinos" class="btn__horario">
             <img class="img-fluid" src="/static/img/trayectos/doble-flecha.svg" alt="boton de cambiar sentido">
           </button>
         </div>
       </div>
-      <button class="btn__horario">Mostrar horarios <i class="far fa-clock"></i></button>
+      <router-link v-if="origen != 'Origen' && destino!= 'Destino' && origen && destino" class="btn__horario" :to="{ name: 'mostrar_horarios', params: { origen: origen.value, destino: destino.value, origenName: origen.label, destinoName: destino.label }}">
+        Mostrar rutas<i class="far fa-clock"></i>
+      </router-link>
     </section>
     <section class="trayectos--favoritos">
       <h1>Favoritos</h1>
@@ -51,11 +53,39 @@
 </template>
 
 <script>
+import Vue from 'vue'
+import vSelect from 'vue-select'
+Vue.component('v-select', vSelect)
+
 export default {
   name: 'PageTrayectos',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      origen: 'Origen',
+      destino: 'Destino',
+      estaciones: []
+    }
+  },
+  mounted: function () {
+    let that = this
+    Vue.http.get('https://metrovlcschedule.herokuapp.com/api/v1/stations').then(response => {
+      for (let key of Object.keys(response.body)) {
+        that.estaciones.push(
+          {
+            value: key,
+            label: response.body[key]
+          }
+        )
+      }
+    }, response => {
+      // error callback
+    })
+  },
+  methods: {
+    invertirDestinos: function () {
+      let temp = this.origen
+      this.origen = this.destino
+      this.destino = temp
     }
   }
 }

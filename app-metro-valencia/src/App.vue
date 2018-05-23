@@ -4,7 +4,7 @@
       <nav>
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link nav--atras" href="#">
+            <a class="nav-link nav--atras" href="#" onclick="history.go(-1)">
               <img class="img-fluid" src="../static/img/common/atras.svg" alt="Volver atrás">
             </a>
           </li>

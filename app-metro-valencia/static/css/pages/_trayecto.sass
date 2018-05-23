@@ -9,7 +9,7 @@
                 width: 10%
             .contenedor--form
                 width: 80%
-                input
+                .dropdown
                     background-color: initial
                     color: $color-blanco
                     border: 2px solid $color-blanco
@@ -20,6 +20,13 @@
                         margin-bottom: 1rem
                     &:focus
                         box-shadow: initial
+                    .dropdown-toggle
+                        border: 0
+                        .selected-tag
+                            color: $color-blanco
+                        .clear, .open-indicator::before
+                            color: $color-blanco
+                            border-color: initial
             .contenedor--icono-trayecto
                 img
                     width: 1.3rem
@@ -36,6 +43,8 @@
                         width: 1.3rem
         .btn__horario
             display: block
+            text-align: center
+            width: 11rem
             background-color: $color-blanco
             border: 0
             border-radius: 0
@@ -50,14 +59,10 @@
         overflow: auto
         padding: 1rem
         h1
-            font-size: 1.3rem
-            text-align: center
             color: $color-rojo
         hr
-            width: 10rem
             border: 1.3px solid $color-rojo
             background-color: $color-rojo
-            margin: 0 auto
         .table
             td
                 padding-top: 1rem

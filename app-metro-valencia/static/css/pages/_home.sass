@@ -1,0 +1,54 @@
+.page--home
+	height: 100vh
+	position: fixed
+	top: 0
+	right: 0
+	left: 0
+	bottom: 0
+	background-image: url(/static/img/home/fondo.jpg)
+	background-size: cover
+	animation-name: aniFondo
+	animation-duration: 8s
+	animation-direction: alternate
+	animation-iteration-count: infinite
+	animation-timing-function: ease-in-out
+	.home--brand
+		display: flex
+		justify-content: center
+		background-color: $color-blanco
+		height: 7rem
+		margin-top: 4rem
+		.brand--img
+			width: 14rem
+	nav
+		position: absolute
+		bottom: 0
+		ul
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-around
+			list-style: none
+			padding: 0
+			li
+				&:first-child, &:nth-child(2)
+					margin: 0 2rem
+				a
+					color: $color-blanco
+				.nav--icono	
+					display: flex
+					justify-content: center
+					align-items: center
+					font-size: 3rem
+					border-radius: 50%
+					background-color: $color-rojo
+					width: 6rem
+					height: 6rem
+					img
+						width: 3rem
+
+@keyframes aniFondo
+	from
+		background-position: 0% 0%
+	to
+		background-position: 100% 0%
+

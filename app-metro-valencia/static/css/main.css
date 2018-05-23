@@ -8449,40 +8449,406 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 body {
-  font-family: 'roboto';
+  font-family: "roboto";
   background-color: #cf1143;
   padding-top: 4rem;
 }
 
-.nav {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  background-color: #fff;
+h1 {
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: 500;
+  margin: 0;
 }
 
-.nav .nav--atras {
-  width: 4.5rem;
+h2 {
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 500;
+  color: #cf1143;
+}
+
+h3 {
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 500;
+  color: #fff;
+  padding: 0;
+  margin: 0;
   padding-top: .7rem;
 }
 
-.nav .nav--logo {
+hr {
   width: 12rem;
-}
-
-.nav li:nth-child(1), .nav li:nth-child(3) {
-  width: 25%;
-}
-
-.nav li:nth-child(2) {
-  width: 50%;
+  border: 1.3px solid #cf1143;
+  background-color: #cf1143;
+  margin: 0 auto;
+  margin-top: .2rem;
 }
 
 p {
-  margin: 0;
+  font-size: 1rem;
+}
+
+.btn {
+  text-transform: uppercase;
+  font-weight: 500;
+  border: 0;
+  border-radius: 0;
+  margin: .5rem;
+  padding: .2rem 1.5rem;
+}
+
+.btn:focus {
+  box-shadow: initial;
+  outline: 0;
+}
+
+header {
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+header .nav {
+  background: #fff;
+  align-items: center;
+}
+
+header .nav--atras {
+  padding-top: 0.7rem;
+  width: 4.5rem;
+}
+
+header .nav--logo {
+  width: 13rem;
+}
+
+header .nav li:nth-child(1), header .nav li:nth-child(3) {
+  width: 25%;
+}
+
+header .nav li:nth-child(2) {
+  width: 50px;
+}
+
+.page--home {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-image: url(/static/img/home/fondo.jpg);
+  background-size: cover;
+  animation-name: aniFondo;
+  animation-duration: 8s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.page--home .home--brand {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  height: 7rem;
+  margin-top: 4rem;
+}
+
+.page--home .home--brand .brand--img {
+  width: 14rem;
+}
+
+.page--home nav {
+  position: absolute;
+  bottom: 0;
+}
+
+.page--home nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style: none;
   padding: 0;
+}
+
+.page--home nav ul li:first-child, .page--home nav ul li:nth-child(2) {
+  margin: 0 2rem;
+}
+
+.page--home nav ul li a {
+  color: #fff;
+}
+
+.page--home nav ul li .nav--icono {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  border-radius: 50%;
+  background-color: #cf1143;
+  width: 6rem;
+  height: 6rem;
+}
+
+.page--home nav ul li .nav--icono img {
+  width: 3rem;
+}
+
+@keyframes aniFondo {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 100% 0%;
+  }
+}
+
+.page--mapas {
+  text-align: center;
+  height: calc(100vh - 4rem);
+}
+
+.page--mapas section.mapas--texto h1 {
+  color: #fff;
+  padding-top: 1rem;
+}
+
+.page--mapas section.mapas--texto hr {
+  border-color: #fff;
+  background-color: #fff;
+}
+
+.page--mapas section.mapas--boton .btn {
+  width: 150px;
+  height: 50px;
+  margin-top: 1rem;
+  border-radius: 0;
+}
+
+.page--mapas section.mapas--mostrado #mostrado--ubicacion, .page--mapas section.mapas--mostrado #mostrado--lineas {
+  width: 90%;
+  height: 80%;
+  margin: 0 auto;
+  display: block;
+}
+
+.page--tarjetas {
+  color: #fff;
+}
+
+.page--tarjetas section.buscador {
+  display: none;
+  margin: 0 auto;
+  padding: 1rem 0;
+  height: 30vh;
+}
+
+.page--tarjetas section.buscador h1 {
+  color: #fff;
+}
+
+.page--tarjetas section.buscador hr {
+  border-color: #fff;
+  background-color: #fff;
+}
+
+.page--tarjetas section.buscador .buscador--formulario {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.page--tarjetas section.buscador .buscador--formulario input:focus {
+  box-shadow: 0;
+}
+
+.page--tarjetas section.buscador .buscador--formulario input::placeholder {
+  color: #fff;
+}
+
+.page--tarjetas section.buscador .buscador--formulario .form-control {
+  border-radius: 0px;
+  border: 2px solid #fff;
+  padding: .5rem;
+  background-color: initial;
+  color: #fff;
+}
+
+.page--tarjetas section.buscador .buscador--formulario .formulario--boton {
+  margin-left: 1rem;
+  border: 0px;
+  border-radius: 0;
+  background-color: initial;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.page--tarjetas section.busqueda {
+  margin: 0 auto;
+  padding: 1rem 0;
+  height: 30vh;
+  width: 90%;
+}
+
+.page--tarjetas section.busqueda h1 {
+  color: #fff;
+}
+
+.page--tarjetas section.busqueda hr {
+  border-color: #fff;
+  background-color: #fff;
+}
+
+.page--tarjetas section.busqueda .busqueda--textos {
+  padding-top: 1rem;
+  width: 80%;
+}
+
+.page--tarjetas section.busqueda .busqueda--anyadir-favoritos {
+  display: block;
+  margin-left: auto;
+  width: 4rem;
+}
+
+.page--tarjetas section.busqueda .busqueda--anyadir-favoritos .btn {
+  border: none;
+  background-color: initial;
+  height: 100%;
+  width: 80%;
+}
+
+.page--tarjetas section.busqueda .busqueda--anyadir-favoritos .btn:focus {
+  box-shadow: initial;
+}
+
+.page--tarjetas section.busqueda .busqueda--anyadir-favoritos .btn svg {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2px;
+}
+
+.page--tarjetas section.anyadir-favoritos {
+  display: none;
+  margin: 0 auto;
+  padding: 1rem 0;
+  height: 30vh;
+  width: 90%;
+}
+
+.page--tarjetas section.anyadir-favoritos h1 {
+  color: #fff;
+}
+
+.page--tarjetas section.anyadir-favoritos hr {
+  border-color: #fff;
+  background-color: #fff;
+}
+
+.page--tarjetas section.anyadir-favoritos p {
+  padding-top: 1rem;
+}
+
+.page--tarjetas section.anyadir-favoritos .anyadir-favoritos--formulario {
+  display: flex;
+}
+
+.page--tarjetas section.anyadir-favoritos .anyadir-favoritos--formulario input:focus {
+  box-shadow: 0;
+}
+
+.page--tarjetas section.anyadir-favoritos .anyadir-favoritos--formulario input::placeholder {
+  color: #fff;
+}
+
+.page--tarjetas section.anyadir-favoritos .anyadir-favoritos--formulario .form-control {
+  border-radius: 0px;
+  border: 2px solid #fff;
+  padding: .5rem;
+  background-color: initial;
+  color: #fff;
+}
+
+.page--tarjetas section.anyadir-favoritos .anyadir-favoritos--formulario .formulario--boton {
+  margin-left: 1rem;
+  border: 0px;
+  border-radius: 0;
+  background-color: initial;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.page--tarjetas section.favoritos {
+  background-color: #fff;
+  color: #cf1143;
+  padding-top: 1rem;
+  height: 70vh;
+}
+
+.page--tarjetas section.favoritos .titulo {
+  margin: 0 auto;
+  width: 45%;
+}
+
+.page--tarjetas section.favoritos .titulo h1 {
+  color: #cf1143;
+}
+
+.page--tarjetas section.favoritos .titulo hr {
+  border-color: #cf1143;
+  background-color: #cf1143;
+}
+
+.page--tarjetas section.favoritos .favoritos--tarjetas {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.page--tarjetas section.favoritos .favoritos--tarjetas .tarjetas--informacion {
+  margin-left: 2rem;
+  font-size: 1rem;
+  color: #000;
+  text-align: left;
+  width: 75%;
+}
+
+.page--tarjetas section.favoritos .favoritos--tarjetas .tarjetas--informacion .informacion--nombre {
+  border-bottom: 1px solid #cf1143;
+}
+
+.page--tarjetas section.favoritos .favoritos--tarjetas .tarjetas--informacion .informacion--nombre p {
+  margin: 0;
+  margin-left: 1rem;
+  padding: .5rem;
+}
+
+.page--tarjetas section.favoritos .favoritos--tarjetas .tarjetas--informacion .informacion--viajes p {
+  margin: 0;
+  margin-left: 1rem;
+  padding: .5rem;
+}
+
+.page--tarjetas section.favoritos .favoritos--tarjetas .tarjetas--eliminar {
+  background-color: initial;
+  border: 0;
+  padding: 1rem;
+  font-size: 1rem;
+  width: 25%;
+  color: #cf1143;
+  text-align: center;
+}
+
+.page--tarjetas section.favoritos .favoritos--tarjetas .tarjetas--eliminar svg {
+  width: 18px;
+  fill: #cf1143;
 }
 
 .page--trayectos section.trayectos--formulario {
@@ -8503,23 +8869,36 @@ p {
   width: 80%;
 }
 
-.page--trayectos section.trayectos--formulario .formulario--contenedor .contenedor--form input {
+.page--trayectos section.trayectos--formulario .formulario--contenedor .contenedor--form .dropdown {
   background-color: initial;
   color: #fff;
   border: 2px solid #fff;
   border-radius: 0;
 }
 
-.page--trayectos section.trayectos--formulario .formulario--contenedor .contenedor--form input::placeholder {
+.page--trayectos section.trayectos--formulario .formulario--contenedor .contenedor--form .dropdown::placeholder {
   color: #fff;
 }
 
-.page--trayectos section.trayectos--formulario .formulario--contenedor .contenedor--form input:first-child {
+.page--trayectos section.trayectos--formulario .formulario--contenedor .contenedor--form .dropdown:first-child {
   margin-bottom: 1rem;
 }
 
-.page--trayectos section.trayectos--formulario .formulario--contenedor .contenedor--form input:focus {
+.page--trayectos section.trayectos--formulario .formulario--contenedor .contenedor--form .dropdown:focus {
   box-shadow: initial;
+}
+
+.page--trayectos section.trayectos--formulario .formulario--contenedor .contenedor--form .dropdown .dropdown-toggle {
+  border: 0;
+}
+
+.page--trayectos section.trayectos--formulario .formulario--contenedor .contenedor--form .dropdown .dropdown-toggle .selected-tag {
+  color: #fff;
+}
+
+.page--trayectos section.trayectos--formulario .formulario--contenedor .contenedor--form .dropdown .dropdown-toggle .clear, .page--trayectos section.trayectos--formulario .formulario--contenedor .contenedor--form .dropdown .dropdown-toggle .open-indicator::before {
+  color: #fff;
+  border-color: initial;
 }
 
 .page--trayectos section.trayectos--formulario .formulario--contenedor .contenedor--icono-trayecto img {
@@ -8545,6 +8924,8 @@ p {
 
 .page--trayectos section.trayectos--formulario .btn__horario {
   display: block;
+  text-align: center;
+  width: 11rem;
   background-color: #fff;
   border: 0;
   border-radius: 0;
@@ -8565,16 +8946,12 @@ p {
 }
 
 .page--trayectos section.trayectos--favoritos h1, .page--trayectos section.trayectos--historial h1 {
-  font-size: 1.3rem;
-  text-align: center;
   color: #cf1143;
 }
 
 .page--trayectos section.trayectos--favoritos hr, .page--trayectos section.trayectos--historial hr {
-  width: 10rem;
   border: 1.3px solid #cf1143;
   background-color: #cf1143;
-  margin: 0 auto;
 }
 
 .page--trayectos section.trayectos--favoritos .table td, .page--trayectos section.trayectos--historial .table td {
@@ -8620,189 +8997,190 @@ p {
   stroke-width: 2px;
 }
 
+.page--tarifas {
+  padding-top: 1rem;
+}
+
+.page--tarifas h1 {
+  color: #fff;
+}
+
+.page--tarifas hr {
+  border: 2px solid #fff;
+  background-color: #fff;
+}
+
+.page--tarifas table.table {
+  background-color: #fff;
+  font-size: 0.7rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.page--tarifas table.table thead th {
+  border-bottom-color: #cf1143;
+}
+
+.page--tarifas table.table tbody th {
+  text-align: left;
+  border-top-color: #cf1143;
+}
+
+.page--tarifas table.table tbody td {
+  border-top-color: #cf1143;
+}
+
+.page--tarifas p {
+  margin: 0 1rem;
+  font-size: .7rem;
+  color: #fff;
+}
+
+.page--tarifas p.notas {
+  font-weight: 500;
+}
+
+.page--tarifas ul {
+  margin: 0 0 1rem 0;
+}
+
+.page--tarifas ul li {
+  color: #fff;
+  font-size: .7rem;
+}
+
+.page--tarifas section.titulos-propios, .page--tarifas section.tarjeta-tuin, .page--tarifas section.tarjeta-mobilis {
+  padding-top: 1rem;
+}
+
 .page--mostrar-horarios {
   height: calc(100vh - 4rem);
 }
 
-.page--mostrar-horarios section.horarios--texto {
-  text-align: center;
-  padding: 1rem 0;
+.page--mostrar-horarios section.horarios--favoritos {
+  background-color: #cf1143;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 5rem;
 }
 
-.page--mostrar-horarios section.horarios--texto h1 {
-  font-size: 1.35rem;
+.page--mostrar-horarios section.horarios--favoritos .ruta {
+  width: 60%;
+}
+
+.page--mostrar-horarios section.horarios--favoritos .ruta .ruta-inicio, .page--mostrar-horarios section.horarios--favoritos .ruta .ruta-fin {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 2rem;
+}
+
+.page--mostrar-horarios section.horarios--favoritos .ruta .ruta-inicio p, .page--mostrar-horarios section.horarios--favoritos .ruta .ruta-fin p {
+  margin: 0;
   color: #fff;
   font-weight: 500;
-  margin: 0;
+  padding-left: .5rem;
 }
 
-.page--mostrar-horarios section.horarios--cuadro {
-  height: 87%;
-  margin: 0 1rem;
+.page--mostrar-horarios section.horarios--favoritos .ruta .ruta-inicio {
+  border-bottom: 0.1rem solid #fff;
+}
+
+.page--mostrar-horarios section.horarios--favoritos .ruta .ruta-fin {
+  border-top: 0.1rem solid #fff;
+}
+
+.page--mostrar-horarios section.horarios--favoritos .zona {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #fff;
 }
 
-.page--mostrar-horarios section.horarios--cuadro .cuadro--favoritos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 17%;
+.page--mostrar-horarios section.horarios--favoritos .zona p {
+  color: #cf1143;
+  margin: 0;
 }
 
-.page--mostrar-horarios section.horarios--cuadro .cuadro--favoritos .ruta {
-  width: 80%;
+.page--mostrar-horarios section.horarios--favoritos .favorito {
+  width: 15%;
 }
 
-.page--mostrar-horarios section.horarios--cuadro .cuadro--favoritos .ruta .ruta-inicio {
-  border-bottom: 0.1rem solid #cf1143;
-  display: flex;
-  justify-content: space-between;
-}
-
-.page--mostrar-horarios section.horarios--cuadro .cuadro--favoritos .ruta .ruta-inicio .zona {
-  margin-top: 0;
-  font-size: .8rem;
-  text-transform: uppercase;
-  font-weight: 100;
-}
-
-.page--mostrar-horarios section.horarios--cuadro .cuadro--favoritos .ruta .ruta-inicio p {
-  margin: .5rem;
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-.page--mostrar-horarios section.horarios--cuadro .cuadro--favoritos .ruta .ruta-fin {
-  border-top: 0.1rem solid #cf1143;
-  display: flex;
-  justify-content: space-between;
-}
-
-.page--mostrar-horarios section.horarios--cuadro .cuadro--favoritos .ruta .ruta-fin .zona {
-  margin-top: 0;
-  font-size: .8rem;
-  text-transform: uppercase;
-  font-weight: 100;
-}
-
-.page--mostrar-horarios section.horarios--cuadro .cuadro--favoritos .ruta .ruta-fin p {
-  margin: .5rem;
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-.page--mostrar-horarios section.horarios--cuadro .cuadro--favoritos .favorito {
-  width: 4.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.page--mostrar-horarios section.horarios--cuadro .cuadro--favoritos .favorito .btn {
+.page--mostrar-horarios section.horarios--favoritos .favorito .btn--fav {
+  padding: .7rem;
   border: none;
   background-color: initial;
   height: 100%;
 }
 
-.page--mostrar-horarios section.horarios--cuadro .cuadro--favoritos .favorito .btn:focus {
+.page--mostrar-horarios section.horarios--favoritos .favorito .btn--fav:focus {
   box-shadow: initial;
 }
 
-.page--mostrar-horarios section.horarios--cuadro .cuadro--favoritos .favorito .btn svg {
+.page--mostrar-horarios section.horarios--favoritos .favorito .btn--fav svg {
   width: 65%;
   fill: none;
-  stroke: #cf1143;
+  stroke: #fff;
   stroke-width: 2px;
 }
 
-.page--mostrar-horarios section.horarios--cuadro .cuadro--rutas {
+.page--mostrar-horarios section.horarios--rutas {
   background-color: #cf1143;
-  margin: .5rem 0;
-  height: 9%;
+  height: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.page--mostrar-horarios section.horarios--cuadro .cuadro--rutas button {
+.page--mostrar-horarios section.horarios--rutas .btn {
   background-color: #fff;
   color: #cf1143;
-  border: 0;
-  margin: .5rem;
-  padding: .2rem 1.5rem;
 }
 
-.page--mostrar-horarios section.horarios--cuadro .cuadro--rutas button:focus {
-  box-shadow: initial;
-  outline: 0;
-}
-
-.page--mostrar-horarios section.horarios--cuadro .cuadro--rutas .inactivo {
+.page--mostrar-horarios section.horarios--rutas .inactivo {
   background-color: initial;
   color: #fff;
   border: 2px solid #fff;
 }
 
-.page--mostrar-horarios section.horarios--cuadro .cuadro--direccion-linea {
-  display: flex;
-  height: 6%;
+.page--mostrar-horarios section.horarios--direccion {
   background-color: #fff;
 }
 
-.page--mostrar-horarios section.horarios--cuadro .cuadro--direccion-linea .cuadro--direccion {
+.page--mostrar-horarios section.horarios--direccion .direccion--linea {
+  padding: .3rem 1rem;
+  width: 90%;
+  margin: 0 auto;
   display: flex;
-  align-items: center;
-  margin-left: 1rem;
-  width: 80%;
-}
-
-.page--mostrar-horarios section.horarios--cuadro .cuadro--direccion-linea .cuadro--direccion p {
-  font-weight: 500;
-  font-size: 1.3rem;
-}
-
-.page--mostrar-horarios section.horarios--cuadro .cuadro--direccion-linea .cuadro--linea {
-  width: 20%;
-  color: #fff;
-  display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
-.page--mostrar-horarios section.horarios--cuadro .cuadro--direccion-linea .cuadro--linea p {
-  font-size: 1.3rem;
-  font-weight: 500;
-}
-
-.page--mostrar-horarios section.horarios--cuadro .cuadro--direccion-linea .cuadro--linea .linea {
-  margin-left: .5rem;
-  padding: .2rem 1rem;
-  color: #fff;
+.page--mostrar-horarios section.horarios--direccion .direccion--linea .linea {
   background-color: #EFC42B;
+  padding: .5rem 1rem;
 }
 
-.page--mostrar-horarios section.horarios--cuadro .cuadro--horarios {
+.page--mostrar-horarios section.horarios--titulo {
   background-color: #cf1143;
-  margin: .5rem 0;
-  height: 9%;
+  height: 3rem;
   color: #fff;
-  font-size: 1.3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.page--mostrar-horarios section.horarios--cuadro .cuadro--tabla {
-  height: 50%;
+.page--mostrar-horarios section.horarios--tabla {
+  height: 37%;
+  margin: 0 1rem;
   overflow: auto;
   background-color: #fff;
 }
 
-.page--mostrar-horarios section.horarios--cuadro .cuadro--tabla table.table {
+.page--mostrar-horarios section.horarios--tabla table.table {
   text-align: center;
 }
 
-.page--mostrar-horarios section.horarios--cuadro .cuadro--tabla table.table th, .page--mostrar-horarios section.horarios--cuadro .cuadro--tabla table.table td {
+.page--mostrar-horarios section.horarios--tabla table.table th, .page--mostrar-horarios section.horarios--tabla table.table td {
   border: 0;
 }
 /*# sourceMappingURL=main.css.map */

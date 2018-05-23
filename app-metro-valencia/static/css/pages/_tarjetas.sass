@@ -1,0 +1,147 @@
+.page--tarjetas
+    color: $color_blanco
+    section.buscador
+        display: none
+        margin: 0 auto
+        padding: 1rem 0
+        height: 30vh
+        h1
+            color: $color-blanco
+        hr
+            border-color: $color-blanco
+            background-color: $color-blanco
+        .buscador--formulario
+            padding-top: 1rem
+            display: flex
+            justify-content: space-between
+            align-items: center
+            width: 90%
+            margin: 0 auto
+            input:focus
+                box-shadow: 0
+            input::placeholder
+                color: $color-blanco
+            .form-control
+                border-radius: 0px
+                border: 2px solid $color-blanco
+                padding: .5rem
+                background-color: initial
+                color: $color-blanco
+            .formulario--boton
+                margin-left: 1rem
+                border: 0px
+                border-radius: 0
+                background-color: initial
+                color: $color-blanco
+                font-size: 2rem
+    section.busqueda
+        margin: 0 auto
+        padding: 1rem 0 
+        height: 30vh
+        width: 90%
+        h1
+            color: $color-blanco
+        hr
+            border-color: $color-blanco
+            background-color: $color-blanco
+        .busqueda--textos
+            padding-top: 1rem
+            width: 80%
+        .busqueda--anyadir-favoritos
+            display: block
+            margin-left: auto
+            width: 4rem
+            .btn
+                border: none
+                background-color: initial
+                height: 100%
+                width: 80%
+                &:focus
+                    box-shadow: initial
+                svg
+                    fill: none
+                    stroke: $color-blanco
+                    stroke-width: 2px
+    section.anyadir-favoritos
+        display: none
+        margin: 0 auto
+        padding: 1rem 0
+        height: 30vh
+        width: 90%
+        h1
+            color: $color-blanco
+        hr
+            border-color: $color-blanco
+            background-color: $color-blanco
+        p
+            padding-top: 1rem
+        .anyadir-favoritos--formulario
+            display: flex
+            input:focus
+                box-shadow: 0        
+            input::placeholder
+                color: $color-blanco
+            .form-control
+                border-radius: 0px
+                border: 2px solid $color-blanco
+                padding: .5rem
+                background-color: initial
+                color: $color-blanco
+            .formulario--boton
+                margin-left: 1rem
+                border: 0px
+                border-radius: 0
+                background-color: initial
+                color: $color-blanco
+                font-size: 1.5rem
+    section.buscador, section.busqueda, section.anyadir-favoritos
+    section.favoritos
+        background-color: $color-blanco
+        color: $color-rojo
+        padding-top: 1rem
+        height: 70vh
+        .titulo
+            margin: 0 auto
+            width: 45%
+            h1
+                color: $color-rojo
+            hr
+                border-color: $color-rojo
+                background-color: $color-rojo
+        .favoritos--tarjetas
+            margin-top: 1rem
+            display: flex
+            justify-content: space-around
+            align-items: center
+            .tarjetas--informacion
+                margin-left: 2rem
+                font-size: 1rem
+                color: $color-negro
+                text-align: left
+                width: 75%
+                .informacion--nombre
+                    border-bottom: 1px solid $color-rojo
+                    p
+                        margin: 0
+                        margin-left: 1rem
+                        padding: .5rem
+                .informacion--viajes
+                    p
+                        margin: 0
+                        margin-left: 1rem
+                        padding: .5rem
+            .tarjetas--eliminar
+                background-color: initial
+                border: 0
+                padding: 1rem
+                font-size: 1rem
+                width: 25%
+                color: $color-rojo
+                text-align: center
+                svg
+                    width: 18px
+                    fill: $color-rojo
+                    
+
+
+
