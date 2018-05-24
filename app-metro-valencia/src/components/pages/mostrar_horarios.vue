@@ -10,7 +10,7 @@
         </div>
       </div>
       <div class="zona">
-        <p>ZONA <span v-for="zona in zonas" v-bind:key="zona">{{ zona }}</span></p>
+        <p>ZONA <span v-for="zona in data.zoneTickets" v-bind:key="zona">{{ zona }}</span></p>
       </div>
       <div class="favorito">
         <button class="btn--fav">
@@ -18,22 +18,21 @@
         </button>
       </div>
     </section>
-    <section class="horarios--rutas">
-      <button class="btn">RUTA 1</button>
-      <button class="btn inactivo">RUTA 2</button>
+    <section class="horarios--rutas-titulo">
+      <h3>Ruta</h3>
     </section>
-    <section class="horarios--direccion">
-      <div class="direccion--linea">
-        Ruta de inicio - Trasbordo 1
-        <div class="linea">1</div>
-      </div>
-      <div class="direccion--linea">
-        Trasbordo 1 - Ruta de fin
-        <div class="linea">1</div>
-      </div>
-      <div class="direccion--linea">
-        Trasbordo 1 - Ruta de fin
-        <div class="linea">1</div>
+    <section class="horarios--rutas">
+      <div class="rutas--linea">
+        <div class="rutas--inicio">
+          <h4>{{origenName}} - {{destinoName}}</h4>
+          <span></span>
+        </div>
+        <div v-if="data != ''" class="linea--direccion">
+          <div v-for="direccion in data.journey[0].journeyTrains" :key="direccion" class="direccion--ruta">
+            <div class="ruta">5</div>
+            <p>Direccion1 / Direccion2</p>
+          </div>
+        </div>
       </div>
     </section>
     <section class="horarios--titulo">
@@ -111,7 +110,7 @@ export default {
       destino: '0',
       origenName: '',
       destinoName: '',
-      zonas: []
+      data: ''
     }
   },
   mounted: function () {
@@ -123,7 +122,7 @@ export default {
     // Pedimos al API los datos de la ruta
     Vue.http.get(`https://metrovlcschedule.herokuapp.com/api/v1/routes?from=${this.origen}&to=${this.destino}`).then(response => {
       // Guardo la información
-      this.zonas = response.body.zoneTickets
+      this.data = response.body
       console.log(response.body)
     }, response => {
       // error callback

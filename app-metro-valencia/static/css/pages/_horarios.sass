@@ -1,6 +1,7 @@
 .page--mostrar-horarios
     height: calc(100vh - 4rem)
     section.horarios--favoritos
+        border-bottom: 3px solid $color-blanco
         background-color: $color-rojo
         display: flex
         justify-content: space-around
@@ -45,38 +46,57 @@
                     fill: none
                     stroke: $color-blanco
                     stroke-width: 2px
-    section.horarios--rutas
+    section.horarios--rutas-titulo
         background-color: $color-rojo
-        height: 4rem
+        padding: 1rem 0
+        color: $color-blanco
+        height: 3rem
         display: flex
-        align-items: center
         justify-content: center
-        .btn
-            background-color: $color-blanco
-            color: $color-rojo
-        .inactivo
-            background-color: initial
-            color: $color-blanco
-            border: 2px solid $color-blanco
-    section.horarios--direccion
+        align-items: center
+        h3
+            padding: 0
+    section.horarios--rutas
+        height: calc((100vh - 15rem) / 2)
+        overflow: auto
         background-color: $color-blanco
-        .direccion--linea
-            padding: .3rem 1rem
-            width: 90%
-            margin: 0 auto
-            display: flex
-            justify-content: space-between
-            align-items: center
-            .linea
-                background-color: $color-linea-1
-                padding: .5rem 1rem
+        text-align: center
+        margin: 0 .5rem
+        .rutas--linea
+            padding-top: .7rem
+            .rutas--inicio
+                display: flex
+                align-items: center
+                justify-content: space-around
+                h4
+                    width: 80%
+                .nav--icono
+                    width: 10%
+                    img
+                        width: 50%
+            .linea--direccion
+                display: flex
+                align-items: center
+                justify-content: space-around
+                padding: .5rem 0
+                .nav--icono
+                    width: 10%
+                    img
+                        width: 50%
+                .ruta
+                    padding: .2rem 1rem
+                    color: $color-blanco
+                    font-weight: 500
+                    background-color: $color-linea-5
+                p
+                    margin: 0
     section.horarios--titulo
         background-color: $color-rojo
         height: 3rem
         color: $color-blanco
     section.horarios--tabla
-        height: 37%
-        margin: 0 1rem
+        height: calc((100vh - 16rem) / 2)
+        margin: 0 .5rem
         overflow: auto
         background-color: $color-blanco
         table.table

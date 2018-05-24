@@ -8478,6 +8478,15 @@ h3 {
   padding-top: .7rem;
 }
 
+h4 {
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 500;
+  color: #000;
+  padding: 0;
+  margin: 0;
+}
+
 hr {
   width: 12rem;
   border: 1.3px solid #cf1143;
@@ -9058,6 +9067,7 @@ header .nav li:nth-child(2) {
 }
 
 .page--mostrar-horarios section.horarios--favoritos {
+  border-bottom: 3px solid #fff;
   background-color: #cf1143;
   display: flex;
   justify-content: space-around;
@@ -9126,41 +9136,74 @@ header .nav li:nth-child(2) {
   stroke-width: 2px;
 }
 
-.page--mostrar-horarios section.horarios--rutas {
+.page--mostrar-horarios section.horarios--rutas-titulo {
   background-color: #cf1143;
-  height: 4rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.page--mostrar-horarios section.horarios--rutas .btn {
-  background-color: #fff;
-  color: #cf1143;
-}
-
-.page--mostrar-horarios section.horarios--rutas .inactivo {
-  background-color: initial;
+  padding: 1rem 0;
   color: #fff;
-  border: 2px solid #fff;
-}
-
-.page--mostrar-horarios section.horarios--direccion {
-  background-color: #fff;
-}
-
-.page--mostrar-horarios section.horarios--direccion .direccion--linea {
-  padding: .3rem 1rem;
-  width: 90%;
-  margin: 0 auto;
+  height: 3rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
-.page--mostrar-horarios section.horarios--direccion .direccion--linea .linea {
-  background-color: #EFC42B;
-  padding: .5rem 1rem;
+.page--mostrar-horarios section.horarios--rutas-titulo h3 {
+  padding: 0;
+}
+
+.page--mostrar-horarios section.horarios--rutas {
+  height: calc((100vh - 15rem) / 2);
+  overflow: auto;
+  background-color: #fff;
+  text-align: center;
+  margin: 0 .5rem;
+}
+
+.page--mostrar-horarios section.horarios--rutas .rutas--linea {
+  padding-top: .7rem;
+}
+
+.page--mostrar-horarios section.horarios--rutas .rutas--linea .rutas--inicio {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.page--mostrar-horarios section.horarios--rutas .rutas--linea .rutas--inicio h4 {
+  width: 80%;
+}
+
+.page--mostrar-horarios section.horarios--rutas .rutas--linea .rutas--inicio .nav--icono {
+  width: 10%;
+}
+
+.page--mostrar-horarios section.horarios--rutas .rutas--linea .rutas--inicio .nav--icono img {
+  width: 50%;
+}
+
+.page--mostrar-horarios section.horarios--rutas .rutas--linea .linea--direccion {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: .5rem 0;
+}
+
+.page--mostrar-horarios section.horarios--rutas .rutas--linea .linea--direccion .nav--icono {
+  width: 10%;
+}
+
+.page--mostrar-horarios section.horarios--rutas .rutas--linea .linea--direccion .nav--icono img {
+  width: 50%;
+}
+
+.page--mostrar-horarios section.horarios--rutas .rutas--linea .linea--direccion .ruta {
+  padding: .2rem 1rem;
+  color: #fff;
+  font-weight: 500;
+  background-color: #4E8C6F;
+}
+
+.page--mostrar-horarios section.horarios--rutas .rutas--linea .linea--direccion p {
+  margin: 0;
 }
 
 .page--mostrar-horarios section.horarios--titulo {
@@ -9170,8 +9213,8 @@ header .nav li:nth-child(2) {
 }
 
 .page--mostrar-horarios section.horarios--tabla {
-  height: 37%;
-  margin: 0 1rem;
+  height: calc((100vh - 16rem) / 2);
+  margin: 0 .5rem;
   overflow: auto;
   background-color: #fff;
 }
