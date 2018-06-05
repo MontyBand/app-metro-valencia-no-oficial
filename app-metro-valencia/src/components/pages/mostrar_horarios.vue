@@ -25,12 +25,10 @@
       <div class="rutas--linea">
         <div class="rutas--inicio">
           <h4>{{origenName}} - {{destinoName}}</h4>
-          <span></span>
         </div>
         <div v-if="data != ''" class="linea--direccion">
           <div v-for="direccion in data.journey[0].journeyTrains" :key="direccion" class="direccion--ruta">
-            <div class="ruta">5</div>
-            <p>Direccion1 / Direccion2</p>
+            <p>Dirección: {{ direccion }}</p>
           </div>
         </div>
       </div>
@@ -38,19 +36,20 @@
     <section class="horarios--titulo">
       <h3>Horarios</h3>
     </section>
+    <section class="horarios--salida-llegada">
+      <table class="table-titulo">
+        <tr>
+          <th>Salida</th>
+          <th>Llegada</th>
+          <th>Salida</th>
+          <th>Llegada</th>
+        </tr>
+      </table>
+    </section>
     <section class="horarios--tabla">
       <table class="table">
-          <tr>
-            <th>Salida</th>
-            <th>Llegada</th>
-            <th>Salida</th>
-            <th>Llegada</th>
-          </tr>
-          <tr>
-            <td>8.15</td>
-            <td>8.25</td>
-            <td>8.15</td>
-            <td>8.25</td>
+          <tr v-for="salida in data.journey[0].journeyHours" :key="salida">
+            <th>{{ salida }}</th>
           </tr>
           <tr>
             <td>8.15</td>

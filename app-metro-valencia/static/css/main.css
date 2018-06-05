@@ -9151,7 +9151,7 @@ header .nav li:nth-child(2) {
 }
 
 .page--mostrar-horarios section.horarios--rutas {
-  height: calc((100vh - 15rem) / 2);
+  height: calc((100vh - 17rem) / 2);
   overflow: auto;
   background-color: #fff;
   text-align: center;
@@ -9181,28 +9181,23 @@ header .nav li:nth-child(2) {
 }
 
 .page--mostrar-horarios section.horarios--rutas .rutas--linea .linea--direccion {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  text-align: left;
+  margin-left: 6rem;
   padding: .5rem 0;
 }
 
-.page--mostrar-horarios section.horarios--rutas .rutas--linea .linea--direccion .nav--icono {
-  width: 10%;
+.page--mostrar-horarios section.horarios--rutas .rutas--linea .linea--direccion .direccion--ruta {
+  display: block;
 }
 
-.page--mostrar-horarios section.horarios--rutas .rutas--linea .linea--direccion .nav--icono img {
-  width: 50%;
-}
-
-.page--mostrar-horarios section.horarios--rutas .rutas--linea .linea--direccion .ruta {
+.page--mostrar-horarios section.horarios--rutas .rutas--linea .linea--direccion .direccion--ruta .ruta {
   padding: .2rem 1rem;
   color: #fff;
   font-weight: 500;
   background-color: #4E8C6F;
 }
 
-.page--mostrar-horarios section.horarios--rutas .rutas--linea .linea--direccion p {
+.page--mostrar-horarios section.horarios--rutas .rutas--linea .linea--direccion .direccion--ruta p {
   margin: 0;
 }
 
@@ -9212,8 +9207,25 @@ header .nav li:nth-child(2) {
   color: #fff;
 }
 
+.page--mostrar-horarios section.horarios--salida-llegada {
+  display: flex;
+  align-items: center;
+  margin: 0 .5rem;
+  height: 2rem;
+  background-color: #fff;
+}
+
+.page--mostrar-horarios section.horarios--salida-llegada .table-titulo {
+  width: 100%;
+  text-align: center;
+}
+
+.page--mostrar-horarios section.horarios--salida-llegada .table-titulo th {
+  border: 0;
+}
+
 .page--mostrar-horarios section.horarios--tabla {
-  height: calc((100vh - 16rem) / 2);
+  height: calc((100vh - 18rem) / 2);
   margin: 0 .5rem;
   overflow: auto;
   background-color: #fff;
@@ -9223,7 +9235,7 @@ header .nav li:nth-child(2) {
   text-align: center;
 }
 
-.page--mostrar-horarios section.horarios--tabla table.table th, .page--mostrar-horarios section.horarios--tabla table.table td {
+.page--mostrar-horarios section.horarios--tabla table.table td {
   border: 0;
 }
 /*# sourceMappingURL=main.css.map */

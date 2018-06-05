@@ -57,7 +57,7 @@
         h3
             padding: 0
     section.horarios--rutas
-        height: calc((100vh - 15rem) / 2)
+        height: calc((100vh - 17rem) / 2)
         overflow: auto
         background-color: $color-blanco
         text-align: center
@@ -75,31 +75,39 @@
                     img
                         width: 50%
             .linea--direccion
-                display: flex
-                align-items: center
-                justify-content: space-around
+                text-align: left
+                margin-left: 6rem
                 padding: .5rem 0
-                .nav--icono
-                    width: 10%
-                    img
-                        width: 50%
-                .ruta
-                    padding: .2rem 1rem
-                    color: $color-blanco
-                    font-weight: 500
-                    background-color: $color-linea-5
-                p
-                    margin: 0
+                .direccion--ruta
+                    display: block
+                    .ruta
+                        padding: .2rem 1rem
+                        color: $color-blanco
+                        font-weight: 500
+                        background-color: $color-linea-5
+                    p
+                        margin: 0
     section.horarios--titulo
         background-color: $color-rojo
         height: 3rem
         color: $color-blanco
+    section.horarios--salida-llegada
+        display: flex
+        align-items: center
+        margin: 0 .5rem
+        height: 2rem
+        background-color: $color-blanco
+        .table-titulo
+            width: 100%
+            text-align: center
+            th
+                border: 0
     section.horarios--tabla
-        height: calc((100vh - 16rem) / 2)
+        height: calc((100vh - 18rem) / 2)
         margin: 0 .5rem
         overflow: auto
         background-color: $color-blanco
         table.table
             text-align: center
-            th, td
+            td
                 border: 0
