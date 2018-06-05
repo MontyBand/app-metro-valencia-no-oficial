@@ -8,7 +8,7 @@
         <li>
           <router-link :to="{ name: 'trayectos'}">
             <span class="nav--icono">
-              <img class="brand--img" src="/static/img/home/tren.svg" alt="Logo-tarifas">
+              <img class="brand--img" src="/static/img/home/tren.svg" alt="Logo-trayectos">
             </span>
             <h2>Trayecto</h2>
           </router-link>
@@ -16,7 +16,7 @@
         <li>
           <router-link :to="{ name: 'tarjetas'}">
             <span class="nav--icono">
-              <img class="brand--img" src="/static/img/home/tarjetas.svg" alt="Logo-tarifas">
+              <img class="brand--img" src="/static/img/home/tarjetas.svg" alt="Logo-tarjetas">
             </span>
             <h2>Tarjetas</h2>
           </router-link>
@@ -24,7 +24,7 @@
         <li>
           <router-link :to="{ name: 'mapas'}">
             <span class="nav--icono">
-              <img class="brand--img" src="/static/img/home/mapas.svg" alt="Logo-tarifas">
+              <img class="brand--img" src="/static/img/home/mapas.svg" alt="Logo-mapas">
             </span>
             <h2>Mapas</h2>
           </router-link>
@@ -38,9 +38,9 @@
           </router-link>
         </li>
         <li>
-          <router-link :to="{ name: 'creditos'}">
+          <router-link :to="{ name: 'nosotros'}">
             <span class="nav--icono">
-              <img class="brand--img" src="/static/img/home/contacto.svg" alt="Logo-tarifas">
+              <img class="brand--img" src="/static/img/home/contacto.svg" alt="Logo-creditos">
             </span>
           <h2>Nosotros</h2>
           </router-link>

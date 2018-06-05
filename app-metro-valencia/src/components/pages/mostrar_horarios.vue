@@ -22,9 +22,9 @@
       <h3>Ruta</h3>
     </section>
     <section class="horarios--rutas">
-      <div class="rutas--linea">
+      <div v-for="linea in data.journey" v-bind:key="linea" class="rutas--linea">
         <div class="rutas--inicio">
-          <h4>{{origenName}} - {{destinoName}}</h4>
+          <h4>{{ getNameStation(linea.journeyFromStation) }} - {{ getNameStation(linea.journeyToStation) }}</h4>
         </div>
         <div v-if="data != ''" class="linea--direccion">
           <div v-for="direccion in data.journey[0].journeyTrains" :key="direccion" class="direccion--ruta">
@@ -41,57 +41,14 @@
         <tr>
           <th>Salida</th>
           <th>Llegada</th>
-          <th>Salida</th>
-          <th>Llegada</th>
         </tr>
       </table>
     </section>
     <section class="horarios--tabla">
       <table class="table">
           <tr v-for="salida in data.journey[0].journeyHours" :key="salida">
-            <th>{{ salida }}</th>
-          </tr>
-          <tr>
-            <td>8.15</td>
-            <td>8.25</td>
-            <td>8.15</td>
-            <td>8.25</td>
-          </tr>
-          <tr>
-            <td>8.15</td>
-            <td>8.25</td>
-            <td>8.15</td>
-            <td>8.25</td>
-          </tr>
-          <tr>
-            <td>8.15</td>
-            <td>8.25</td>
-            <td>8.15</td>
-            <td>8.25</td>
-          </tr>
-          <tr>
-            <td>8.15</td>
-            <td>8.25</td>
-            <td>8.15</td>
-            <td>8.25</td>
-          </tr>
-          <tr>
-            <td>8.15</td>
-            <td>8.25</td>
-            <td>8.15</td>
-            <td>8.25</td>
-          </tr>
-          <tr>
-            <td>8.15</td>
-            <td>8.25</td>
-            <td>8.15</td>
-            <td>8.25</td>
-          </tr>
-          <tr>
-            <td>8.15</td>
-            <td>8.25</td>
-            <td>8.15</td>
-            <td>8.25</td>
+            <td>{{ salida }}</td>
+            <td>{{ calcularHoraLlegada(salida, data.duration) }}</td>
           </tr>
         </table>
     </section>
@@ -100,6 +57,7 @@
 
 <script>
 import Vue from 'vue'
+const $ = require('jquery')
 
 export default {
   name: 'PageHorarios',
@@ -126,6 +84,38 @@ export default {
     }, response => {
       // error callback
     })
+  },
+  methods: {
+    // Recogemos el numero que nos da para dar el nombre de la estacion
+    getNameStation: function (id) {
+      let name = ''
+      // Pedimos al API los datos para que cuando des un numero te de el nombre de la estacion
+      // Los pedimos con Jquery y Ajax porque no hay sincro con vue resource
+      $.ajax({
+        url: `https://metrovlcschedule.herokuapp.com/api/v1/stations/converter/${id}`,
+        success: function (result) {
+          name = result.station_name
+        },
+        async: false
+      })
+      return name
+    },
+    calcularHoraLlegada: function (hora, duracion) {
+      // Transformamos a minutos y sumamos la duracion
+      let arraySalida = hora.split(':')
+      let numMinutosDeHora = (parseInt(arraySalida[0]) * 60) + parseInt(arraySalida[1])
+      let totalMinutos = numMinutosDeHora + parseInt(duracion)
+      // Transformar a Horas
+      let horasFinales = Math.trunc(totalMinutos / 60)
+      let minutosFinales = totalMinutos % 60
+      return this.filtroHora(horasFinales) + ':' + this.filtroHora(minutosFinales)
+    },
+    filtroHora: function (tiempo) {
+      // Parse int to string
+      let miTiempo = tiempo + ''
+      // Logic
+      return miTiempo.length === 1 ? '0' + tiempo : tiempo
+    }
   }
 }
 </script>

@@ -6,6 +6,7 @@ import PageHome from '@/components/pages/home'
 import PageMapas from '@/components/pages/mapas'
 import PageTarjetas from '@/components/pages/tarjetas'
 import PageTarifas from '@/components/pages/Tarifas'
+import PageNosotros from '@/components/pages/Creditos'
 
 Vue.use(Router)
 
@@ -15,6 +16,11 @@ export default new Router({
       path: '/trayectos',
       name: 'trayectos',
       component: PageTrayectos
+    },
+    {
+      path: '/nosotros',
+      name: 'nosotros',
+      component: PageNosotros
     },
     {
       path: '/tarifas',

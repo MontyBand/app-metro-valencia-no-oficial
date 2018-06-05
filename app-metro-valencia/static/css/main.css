@@ -8618,7 +8618,6 @@ header .nav li:nth-child(2) {
 
 .page--mapas {
   text-align: center;
-  height: calc(100vh - 4rem);
 }
 
 .page--mapas section.mapas--texto h1 {
@@ -8632,17 +8631,26 @@ header .nav li:nth-child(2) {
 }
 
 .page--mapas section.mapas--boton .btn {
-  width: 150px;
+  width: 140px;
   height: 50px;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   border-radius: 0;
 }
 
 .page--mapas section.mapas--mostrado #mostrado--ubicacion, .page--mapas section.mapas--mostrado #mostrado--lineas {
   width: 90%;
-  height: 80%;
+  height: 65vh;
   margin: 0 auto;
   display: block;
+}
+
+@media all and (max-width: 320px) {
+  .page--mapas section.mapas--mostrado #mostrado--ubicacion, .page--mapas section.mapas--mostrado #mostrado--lineas {
+    width: 90%;
+    height: 60vh;
+    margin: 0 auto;
+    display: block;
+  }
 }
 
 .page--tarjetas {
@@ -9237,5 +9245,47 @@ header .nav li:nth-child(2) {
 
 .page--mostrar-horarios section.horarios--tabla table.table td {
   border: 0;
+}
+
+.page--creditos h1 {
+  color: #fff;
+  padding-top: .5rem;
+}
+
+.page--creditos hr {
+  border-color: #fff;
+  background-color: #fff;
+}
+
+.page--creditos .creditos--lista {
+  margin-top: 1rem;
+}
+
+.page--creditos .creditos--lista .list-group-item {
+  background-color: transparent;
+  color: #fff;
+  font-weight: 500;
+  padding: 1.15rem .8rem;
+}
+
+.page--creditos .creditos--lista .list-group-item:first-child {
+  border-top: none;
+}
+
+.page--creditos .creditos--lista .list-group-item:nth-child(6) {
+  border-bottom: none;
+}
+
+.page--creditos .creditos--lista .list-group-item a {
+  color: #878787;
+  text-decoration: none;
+}
+
+.page--creditos .creditos--lista .list-group-item a:hover {
+  color: #e3e3e3;
+}
+
+.page--creditos img {
+  width: 100%;
 }
 /*# sourceMappingURL=main.css.map */
