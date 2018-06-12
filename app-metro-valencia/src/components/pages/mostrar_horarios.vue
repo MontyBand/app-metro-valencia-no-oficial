@@ -84,6 +84,24 @@ export default {
     }, response => {
       // error callback
     })
+    // Cargo el historial
+    let historial = []
+    if (localStorage.getItem('historial') !== null) historial = JSON.parse(localStorage.getItem('historial'))
+    // Hacemos un limite - borramos el primer elemento
+    if (historial.length >= 5) {
+      historial.shift()
+    }
+    // Creo nuevo item para el historial
+    let nuevoItem = {
+      id: Date.now(),
+      origen: this.origenName,
+      destino: this.destinoName,
+      origenId: this.origen,
+      destinoId: this.destino
+    }
+    historial.push(nuevoItem)
+    // Guardo el historial
+    localStorage.setItem('historial', JSON.stringify(historial))
   },
   methods: {
     // Recogemos el numero que nos da para dar el nombre de la estacion
